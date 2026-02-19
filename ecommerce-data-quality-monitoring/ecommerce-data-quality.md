@@ -35,6 +35,18 @@ Key actions included:
 
 ---
 
+## SQL examples
+Anonymized SQL scripts used to validate catalog integrity and detect anomalies:
+
+- `sql/01_top_camera_thumbnails.sql`
+- `sql/02_b2b_products_visible_on_site.sql`
+- `sql/03_recent_cases_missing_expected_tags.sql`
+- `sql/04_licensed_products_without_license.sql`
+
+> Note: Scripts are anonymized and adapted from real production work. No proprietary data or internal identifiers are included.
+
+---
+
 ## Tools & Stack
 - SQL  
 - BI dashboards (Metabase / Looker Studio)  
