@@ -35,6 +35,18 @@ Key initiatives:
 
 ---
 
+## SQL examples
+Anonymized SQL scripts used to validate catalog integrity and detect anomalies:
+
+- `sql/01_price_divergence_detection.sql`
+- `sql/02_material_pricing_audit.sql`
+- `sql/03_price_variation_consistency.sql`
+- `sql/04_price_anomaly_feed.sql`
+
+> Note: Scripts are anonymized and adapted from real production work. No proprietary data or internal identifiers are included.
+
+---
+
 ## Tools & Stack
 - SQL  
 - BI dashboards (Metabase / Looker Studio / Power BI)  
