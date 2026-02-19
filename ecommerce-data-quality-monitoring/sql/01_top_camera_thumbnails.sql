@@ -1,26 +1,22 @@
-## Example SQL (Anonymized)
+/* 
+Top Camera thumbnails check (anonymized)
+Goal: detect products where a specific thumbnail/asset tag was incorrectly set as the main image.
+*/
 
-> The SQL below was adapted and anonymized from real production work.  
-> No proprietary data, identifiers, or internal table names are included.
-
-### 1) Catalog completeness checks
-```sql
-WITH catalog AS (
-  SELECT
-    p.product_id,
-    p.sku,
-    p.product_name,
-    p.license_id,
-    pr.price_amount,
-    p.is_active
-  FROM catalog_products p
-  LEFT JOIN catalog_prices pr
-    ON pr.product_id = p.product_id
-)
 SELECT
-  COUNT(*) AS total_products,
-  SUM(CASE WHEN sku IS NULL OR sku = '' THEN 1 ELSE 0 END) AS missing_sku,
-  SUM(CASE WHEN license_id IS NULL THEN 1 ELSE 0 END) AS missing_license,
-  SUM(CASE WHEN price_amount IS NULL THEN 1 ELSE 0 END) AS missing_price
-FROM catalog
-WHERE is_active = TRUE;
+  p.sku,
+  p.product_id,
+  CONCAT('https://<admin_or_catalog_url>/products/', p.product_id) AS product_link,
+  a.asset_tag AS suspected_thumb_tag,
+  p.created_at,
+  p.updated_at
+FROM catalog_products p
+JOIN product_assets a
+  ON a.product_id = p.product_id
+WHERE p.is_active = TRUE
+  AND (
+    a.asset_tag ILIKE '%redminote13%' OR
+    a.asset_tag ILIKE '%v3%' OR
+    a.asset_tag ILIKE '%top_camera%'
+  )
+ORDER BY p.updated_at DESC;
