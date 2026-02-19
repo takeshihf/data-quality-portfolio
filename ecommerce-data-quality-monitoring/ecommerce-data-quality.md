@@ -38,7 +38,7 @@ Key actions included:
 ## SQL examples
 Anonymized SQL scripts used to validate catalog integrity and detect anomalies:
 
-- `sql/01_top_camera_thumbnails.sql`
+- `sql/01_catalog_mismatch_between_layers.sql`
 - `sql/02_duplicate_sku_check.sql`
 - `sql/03_public_visibility_rules.sql`
 - `sql/04_licensed_products_without_license.sql`
