@@ -76,4 +76,4 @@ I’m particularly interested in roles involving:
 ---
 
 ## Availability
-Open to remote opportunities, especially within EU time zones and international environments.
+Open to remote collaboration in data quality and analytics.
