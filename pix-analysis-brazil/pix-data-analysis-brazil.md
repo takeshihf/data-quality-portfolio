@@ -102,6 +102,12 @@ These findings highlight uneven digital financial inclusion.
 
 ---
 
+## SQL
+- `sql/schema.sql` — PostgreSQL schema for Pix datasets  
+- `sql/analytics.sql` — analytical queries used for insights and dashboard validation  
+
+---
+
 ## Live Dashboard
 
 Explore the interactive dashboard:
