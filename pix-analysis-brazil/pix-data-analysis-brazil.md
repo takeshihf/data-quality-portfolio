@@ -80,7 +80,7 @@ pix-analysis/
 ## Dashboard
 
 Interactive dashboard:  
-(Add your Looker Studio or Power BI link here)
+https://lookerstudio.google.com/reporting/0765529d-4c7e-40c2-b538-a15f8460e19b
 
 ---
 
