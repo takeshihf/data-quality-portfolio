@@ -1,82 +1,166 @@
-# Pix Data Analysis — Brazil Open Data Project
+# Pix Adoption Analysis — End-to-End Data Project
 
-This project explores transaction patterns and regional distribution of Pix, Brazil’s instant payment system, using official public datasets from the Central Bank of Brazil.
+🔗 Live Dashboard: https://lookerstudio.google.com/reporting/0765529d-4c7e-40c2-b538-a15f8460e19b  
+📊 Official Data Source: https://dadosabertos.bcb.gov.br/dataset/pix  
 
-It was developed as an end-to-end data analysis case study covering data extraction, transformation, modeling, and visualization using modern data tools.
+An end-to-end data analysis project exploring adoption patterns of Pix, Brazil’s instant payment system, using official Central Bank open datasets.
 
----
-
-## Objectives
-
-- Analyze Pix adoption across Brazilian regions
-- Compare individual (PF) vs business (PJ) transaction behavior
-- Build a reproducible pipeline from raw public data to analytical insights
-- Demonstrate end-to-end data analytics skills using real-world datasets
+This project demonstrates the full analytics lifecycle: data extraction, transformation, modeling, and insight generation from real-world public data.
 
 ---
 
-## Tech Stack
+## Why This Project Exists
 
-- Python (requests, pandas) — data extraction and transformation  
-- PostgreSQL — data modeling and storage  
-- SQL — aggregations and analytical queries  
-- Looker Studio / Power BI — dashboard and visualization  
+Pix is one of the fastest-growing real-time payment systems globally.  
+Understanding its adoption patterns provides insights into:
 
----
+- Financial inclusion  
+- Regional digitalization  
+- Behavioral differences between individuals and businesses  
 
-## Data Source
-
-Data was collected from the Central Bank of Brazil open data portal using the SGS public API.
-
-Sources include:
-- Pix keys by region
-- Pix transactions by municipality
-- Individual vs business usage metrics
-
-All data used in this project is publicly available and reproducible.
+This project was built to transform raw public data into actionable insights through a reproducible analytics pipeline.
 
 ---
 
-## Pipeline Overview
+## Impact
 
-1. Extracted Pix datasets via API requests using Python  
-2. Converted JSON responses into structured CSV datasets  
-3. Modeled relational tables in PostgreSQL  
-4. Wrote analytical SQL queries for aggregations  
-5. Built dashboards to visualize trends and regional patterns  
+- Built a complete data pipeline from public API to dashboards  
+- Processed large-scale regional payment datasets  
+- Generated regional adoption insights with business interpretation  
+- Delivered a reproducible open-data analytics case study  
 
----
-
-## Key Insights
-
-- The Southeast region concentrates the majority of Pix transaction volume  
-- Business Pix usage is more regionally concentrated than individual usage  
-- There are clear regional disparities in digital payment adoption across Brazil  
+This mirrors real-world analytics workflows used in production environments.
 
 ---
 
-## Dashboard
+## Architecture Overview
 
-Interactive dashboard:  
+Data Pipeline:
+
+Public API → Python ETL → PostgreSQL → SQL Analytics → BI Dashboard
+
+### Stack
+
+- Python (requests, pandas) — ingestion & transformation  
+- PostgreSQL — relational modeling  
+- SQL — analytical queries  
+- Looker Studio / Power BI — visualization  
+
+---
+
+## Data Sources
+
+All datasets used in this project come from the official Central Bank of Brazil (BCB) Open Data Portal.
+
+Primary source:  
+https://dadosabertos.bcb.gov.br/dataset/pix
+
+Datasets include:
+- Pix keys distribution  
+- Transactions per municipality  
+- Individual vs business usage patterns  
+
+The data is publicly available and maintained by Brazil’s monetary authority, ensuring reliability and reproducibility.
+
+---
+
+## Data Pipeline
+
+### 1. Data Extraction
+- Consumed BCB open data endpoints via Python
+- Converted raw responses into structured tabular datasets
+
+### 2. Transformation
+- Cleaned and standardized regional identifiers  
+- Normalized PF (individual) vs PJ (business) dimensions  
+- Generated analysis-ready datasets  
+
+### 3. Storage
+- Modeled relational schema for analytical querying  
+- Structured tables for scalable aggregation  
+
+### 4. Analysis
+- Aggregated regional transaction trends  
+- Compared adoption patterns across segments  
+- Identified concentration clusters  
+
+### 5. Visualization
+Built dashboards highlighting:
+- Regional disparities  
+- Business vs individual adoption  
+- Volume distribution patterns  
+
+---
+
+## Key Findings
+
+- Pix adoption is heavily concentrated in Southeast Brazil  
+- Business usage shows stronger regional clustering than individual usage  
+- Significant disparities exist in digital payment penetration across regions  
+
+These findings highlight uneven digital financial inclusion.
+
+---
+
+## Live Dashboard
+
+Explore the interactive dashboard:
+
 https://lookerstudio.google.com/reporting/0765529d-4c7e-40c2-b538-a15f8460e19b
 
+The dashboard provides:
+- Regional adoption comparisons  
+- Behavioral segmentation insights  
+- Interactive exploration of Pix trends  
+
 ---
 
-## What This Project Demonstrates
+## Reproducibility
+
+This project was intentionally designed to be reproducible.
+
+To replicate:
+1. Pull public datasets from the BCB Open Data Portal  
+2. Load into a relational database  
+3. Execute analytical queries  
+4. Connect a BI tool for visualization  
+
+---
+
+## What This Demonstrates
 
 - Working with real-world public datasets  
-- Building reproducible data pipelines  
-- SQL data modeling and analytics  
-- Translating raw data into business insights  
+- End-to-end data pipeline design  
+- SQL-first analytical thinking  
+- Translating raw data into insights  
 - Communicating findings through dashboards  
 
 ---
 
-## Why This Project
+## Transparency & Reproducibility
 
-This project was built to showcase practical data analytics skills using real data, focusing on clarity, reproducibility, and real-world applicability.
+This project is fully reproducible using public data.
 
-It reflects how I approach data problems end-to-end: from extraction to insights.
+Official dataset:  
+https://dadosabertos.bcb.gov.br/dataset/pix
+
+Public dashboard:  
+https://lookerstudio.google.com/reporting/0765529d-4c7e-40c2-b538-a15f8460e19b
+
+No proprietary or private data was used.
+
+---
+
+## About Me
+
+I build data projects focused on reliability, clarity, and real-world applicability.
+
+My work sits at the intersection of:
+- Data Quality  
+- Analytics  
+- Business Intelligence  
+
+If you're hiring for data roles involving analytics, quality, or data reliability — let's connect.
 
 ---
 
