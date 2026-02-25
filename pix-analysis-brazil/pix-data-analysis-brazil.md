@@ -55,28 +55,6 @@ All data used in this project is publicly available and reproducible.
 
 ---
 
-## Repository Structure
-
-pix-analysis/
-│
-├── data/
-│ ├── raw/
-│ └── processed/
-│
-├── notebooks/
-│ └── pix_analysis.ipynb
-│
-├── sql/
-│ ├── schema.sql
-│ └── queries.sql
-│
-├── dashboard/
-│ └── screenshots/
-│
-└── README.md
-
----
-
 ## Dashboard
 
 Interactive dashboard:  
