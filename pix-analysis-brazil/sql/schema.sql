@@ -22,7 +22,7 @@ CREATE INDEX IF NOT EXISTS idx_pix_keys_user_nature ON pix_keys (user_nature);
 
 
 CREATE TABLE IF NOT EXISTS pix_txn_municipality (
-  yyyymm              INTEGER     NOT NULL CHECK (yyyymm BETWEEN 200001 AND 210012),
+  date              INTEGER     NOT NULL CHECK (yyyymm BETWEEN 200001 AND 210012),
   municipality_ibge    INTEGER     NOT NULL,
   municipality_name    TEXT        NOT NULL,
   state_ibge           INTEGER     NOT NULL,
@@ -56,7 +56,7 @@ CREATE INDEX IF NOT EXISTS idx_pix_txn_municipality ON pix_txn_municipality (mun
 CREATE OR REPLACE VIEW v_pix_txn_municipality AS
 SELECT
   t.*,
-  to_date(t.yyyymm::text || '01', 'YYYYMMDD') AS month_start
+  to_date(t.date::text || '01', 'YYYYMMDD') AS month_start
 FROM pix_txn_municipality t;
 
 COMMIT
