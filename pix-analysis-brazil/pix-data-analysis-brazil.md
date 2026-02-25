@@ -131,6 +131,13 @@ To replicate:
 3. Execute analytical queries  
 4. Connect a BI tool for visualization  
 
+
+To load the dataset into PostgreSQL:
+
+1. Download the public CSV files
+2. Update file paths in `scripts/load_postgres.sql`
+3. Execute the script in pgAdmin or psql
+
 ---
 
 ## What This Demonstrates
