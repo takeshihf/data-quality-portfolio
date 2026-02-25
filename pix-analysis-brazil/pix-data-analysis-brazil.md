@@ -1,4 +1,4 @@
-# Pix Adoption Analysis — End-to-End Data Project
+# Pix Analysis Brazil — End-to-End Data Project
 
 🔗 Live Dashboard: https://lookerstudio.google.com/reporting/0765529d-4c7e-40c2-b538-a15f8460e19b  
 📊 Official Data Source: https://dadosabertos.bcb.gov.br/dataset/pix  
