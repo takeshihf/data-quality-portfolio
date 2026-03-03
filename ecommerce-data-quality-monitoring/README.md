@@ -57,18 +57,27 @@ Anonymized SQL scripts used to validate catalog integrity and detect anomalies:
 ---
 
 ## Results
-- Significant reduction in recurring catalog alerts  
-- Eliminated high-volume errors (e.g., a recurring issue dropped from 74 occurrences to 0 within one day)  
-- Improved cross-team visibility into catalog health  
-- Faster identification and resolution of data inconsistencies  
+
+- Reduced high-volume recurring catalog errors from 74 occurrences to 0 within one day
+- Decreased internal issue alerts from 3–6 per day to 1–2 per month
+- Eliminated recurring licensing-related inconsistencies after last identified incident
+- Reduced dependency on manual error reporting from CX and Growth teams
+
+---
+
+## Risk Mitigation
+
+- Financial risk
+- Contractual exposure
+- Operational inefficiencies
 
 ---
 
 ## Business Impact
-- Reduced operational friction  
-- Improved reliability of product catalog  
-- Faster incident response cycles  
-- Better confidence in data integrity across teams  
+- Mitigated contractual risk related to licensed products
+- Protected revenue by preventing incorrect royalty allocations
+- Improved customer navigation experience through structured catalog validation
+- Shifted workflow from reactive error detection to preventive monitoring
 
 ---
 
