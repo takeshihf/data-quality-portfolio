@@ -1,41 +1,71 @@
-# E-commerce Data Quality Monitoring System
+# E-commerce Data Quality Monitoring & Risk Mitigation Framework
 
 ## Overview
-This project presents a real-world data quality monitoring solution built to detect catalog inconsistencies and prevent operational issues in a production e-commerce environment.
 
-The goal was to improve visibility into recurring data problems and enable faster detection and resolution of catalog anomalies.
+This project documents a production-inspired data quality monitoring framework designed to prevent operational, contractual, and financial risks in an e-commerce environment.
+
+Instead of reacting to issues reported by other teams, this solution introduced a preventive validation layer using SQL-based anomaly detection and centralized BI dashboards.
+
+The system shifted workflows from reactive error handling to structured, proactive monitoring.
 
 ---
 
 ## Business Context
-In a fast-growing e-commerce environment, product data accuracy is critical for licensing compliance, customer trust, and operational stability.
 
-Recurring issues such as licensing mismatches, incorrect configurations, and catalog inconsistencies were impacting multiple teams. However, there was no centralized system to monitor data quality across the catalog.
+In fast-growing e-commerce environments, catalog integrity directly impacts:
 
-This created reactive workflows and delayed incident response.
+- Licensing compliance and royalty allocation  
+- Customer experience and conversion  
+- B2B/B2C product visibility rules  
+- Operational stability across teams  
 
----
+Recurring inconsistencies in catalog structure, product visibility, and licensing configurations were generating manual alerts and cross-team friction.
 
-## Problem
-- Lack of centralized visibility into catalog inconsistencies  
-- Manual detection of product and licensing errors  
-- Recurring alerts without structured monitoring  
-- Slow response time to data issues  
+There was no centralized validation layer.
 
----
-
-## Approach
-I designed and implemented a data quality monitoring solution using SQL-based validation logic and BI dashboards.
-
-Key actions included:
-- Developing SQL queries to detect anomalies across product dimensions  
-- Building centralized monitoring dashboards for data visibility  
-- Implementing validation rules for recurring issues  
-- Structuring the solution for future automation (e.g., workflow automation tools)
+As a result:
+- Errors were often discovered by chance  
+- Licensing inconsistencies created contractual exposure  
+- Catalog issues required reactive fixes  
+- Operational time was consumed by manual checks  
 
 ---
 
-## SQL examples
+## Core Problems
+
+- No centralized visibility into catalog inconsistencies  
+- Manual detection of licensing and configuration errors  
+- High recurrence of specific display issues (e.g., “Top Camera”)  
+- Slow response time to production data anomalies  
+- Dependency on CX and Growth teams for error discovery  
+
+---
+
+## Solution Architecture
+
+I designed and implemented a SQL-driven validation and monitoring framework structured around three layers:
+
+### 1. Detection Layer
+- SQL anomaly detection across catalog dimensions  
+- Licensing mismatch validation  
+- SKU duplication checks  
+- Public visibility and B2B rule validation  
+- Completeness and configuration integrity checks  
+
+### 2. Monitoring Layer
+- Centralized BI dashboards (Metabase / Looker Studio)  
+- Cross-team visibility into catalog health  
+- Structured tracking of recurring anomalies  
+
+### 3. Automation Roadmap
+- Designed for automated alerting via workflow tools (n8n)  
+- Planned API-based remediation layer  
+- Transition from manual correction to automated preventive workflows  
+
+---
+
+## SQL Examples
+
 Anonymized SQL scripts used to validate catalog integrity and detect anomalies:
 
 - `sql/01_catalog_mismatch_between_layers.sql`
@@ -49,44 +79,42 @@ Anonymized SQL scripts used to validate catalog integrity and detect anomalies:
 ---
 
 ## Tools & Stack
+
 - SQL  
-- BI dashboards (Metabase / Looker Studio)  
+- BI Dashboards (Metabase / Looker Studio)  
 - Data validation logic  
-- Automation roadmap (n8n integration planned)
+- Workflow automation planning (n8n)  
 
 ---
 
 ## Results
 
-- Reduced high-volume recurring catalog errors from 74 occurrences to 0 within one day
-- Decreased internal issue alerts from 3–6 per day to 1–2 per month
-- Eliminated recurring licensing-related inconsistencies after last identified incident
-- Reduced dependency on manual error reporting from CX and Growth teams
-
----
-
-## Risk Mitigation
-
-- Financial risk
-- Contractual exposure
-- Operational inefficiencies
+- Reduced high-volume recurring catalog errors from 74 occurrences to 0 within one day  
+- Decreased internal issue alerts from 3–6 per day to 1–2 per month  
+- Eliminated recurring licensing inconsistencies after last identified incident  
+- Reduced dependency on manual alerts from CX and Growth teams  
+- Improved cross-team visibility into catalog health  
 
 ---
 
 ## Business Impact
-- Mitigated contractual risk related to licensed products
-- Protected revenue by preventing incorrect royalty allocations
-- Improved customer navigation experience through structured catalog validation
-- Shifted workflow from reactive error detection to preventive monitoring
+
+- Mitigated contractual risk related to licensed products  
+- Protected revenue by preventing incorrect royalty allocations  
+- Prevented unintended B2B-exclusive product sales  
+- Improved customer navigation through structured catalog validation  
+- Reduced operational friction and manual monitoring workload  
 
 ---
 
 ## Future Improvements
+
 - Automated alert triggers via workflow automation  
-- API-based anomaly detection pipelines  
-- Expansion into a full data observability layer  
+- API-based anomaly detection and remediation pipelines  
+- Expansion into a broader data observability layer  
 
 ---
 
 ## Key Takeaway
-Data quality monitoring is a high-leverage investment in e-commerce environments. Even simple validation layers can dramatically improve operational reliability and data trust.
+
+Implementing a structured data quality monitoring layer in e-commerce environments can dramatically reduce operational risk, protect revenue, and shift workflows from reactive corrections to preventive system reliability.
